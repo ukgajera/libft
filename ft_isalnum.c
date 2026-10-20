@@ -6,12 +6,11 @@
 /*   By: umgajera <umgajera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 13:54:35 by umgajera          #+#    #+#             */
-/*   Updated: 2026/10/09 13:16:49 by umgajera         ###   ########.fr       */
+/*   Updated: 2026/10/15 09:31:06 by umgajera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_isalnum(int arg)
 {
@@ -22,8 +21,3 @@ int	ft_isalnum(int arg)
 	}
 	return (1);
 }
-
-// int	main(void)
-// {
-// 	printf("%d ", ft_isalnum('+'));
-// }

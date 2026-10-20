@@ -6,7 +6,7 @@
 /*   By: umgajera <umgajera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 12:14:46 by umgajera          #+#    #+#             */
-/*   Updated: 2026/10/15 11:04:23 by umgajera         ###   ########.fr       */
+/*   Updated: 2026/10/15 18:45:09 by umgajera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,4 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		i++;
 	}
 	return (dest);
-}
-
-int main(void)
-{
-	char d[] =  "Ramazana";
-	char s[] = 	"Ramayana";
-
-	ft_memcpy(d , s, 6);
-	printf("%s\n", d);
-	memcpy(d , s, 6);
-	printf("%s\n", d);
 }

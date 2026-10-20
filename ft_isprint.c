@@ -6,12 +6,11 @@
 /*   By: umgajera <umgajera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 17:40:51 by umgajera          #+#    #+#             */
-/*   Updated: 2026/10/09 13:17:41 by umgajera         ###   ########.fr       */
+/*   Updated: 2026/10/14 12:27:45 by umgajera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_isprint(int arg)
 {

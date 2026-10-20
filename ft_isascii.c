@@ -6,12 +6,11 @@
 /*   By: umgajera <umgajera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 14:37:11 by umgajera          #+#    #+#             */
-/*   Updated: 2026/10/09 13:17:21 by umgajera         ###   ########.fr       */
+/*   Updated: 2026/10/14 12:27:37 by umgajera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_isascii(int arg)
 {

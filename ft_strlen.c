@@ -6,21 +6,18 @@
 /*   By: umgajera <umgajera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 18:09:08 by umgajera          #+#    #+#             */
-/*   Updated: 2026/10/09 13:16:14 by umgajera         ###   ########.fr       */
+/*   Updated: 2026/10/14 12:28:31 by umgajera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 
 	i = 0;
-	while (*s)
-	{
+	while (s[i] != '\0')
 		i++;
-	}
 	return (i);
 }
