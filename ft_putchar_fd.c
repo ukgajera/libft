@@ -6,7 +6,7 @@
 /*   By: umgajera <umgajera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/24 16:50:52 by umgajera          #+#    #+#             */
-/*   Updated: 2026/10/24 16:54:40 by umgajera         ###   ########.fr       */
+/*   Updated: 2026/10/24 17:20:43 by umgajera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write (fd, &c,	1);
+	write (fd, &c, 1);
 }
