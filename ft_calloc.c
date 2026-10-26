@@ -6,7 +6,7 @@
 /*   By: umgajera <umgajera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 10:25:00 by umgajera          #+#    #+#             */
-/*   Updated: 2026/10/20 12:10:13 by umgajera         ###   ########.fr       */
+/*   Updated: 2026/10/21 12:41:18 by umgajera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,7 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	char	*temp;
-	size_t	i;
 
-	i = 0;
 	temp = (char *)malloc(nmemb * size);
 	if (!temp)
 		return (NULL);

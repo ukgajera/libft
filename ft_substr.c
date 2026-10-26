@@ -6,7 +6,7 @@
 /*   By: umgajera <umgajera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 15:45:49 by umgajera          #+#    #+#             */
-/*   Updated: 2026/10/20 19:15:32 by umgajera         ###   ########.fr       */
+/*   Updated: 2026/10/22 17:35:51 by umgajera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int		size;
-	char	*sub;
-	int		i;
+	size_t		size;
+	size_t		i;
+	char		*sub;
 
 	size = ft_strlen(s);
 	if (!s)

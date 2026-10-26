@@ -6,7 +6,7 @@
 /*   By: umgajera <umgajera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 15:11:40 by umgajera          #+#    #+#             */
-/*   Updated: 2026/10/23 13:15:39 by umgajera         ###   ########.fr       */
+/*   Updated: 2026/10/25 22:54:25 by umgajera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,14 +46,12 @@ void	*free_mem(char **arr, size_t i)
 	return (NULL);
 }
 
-int	set_string(char **arr, const char *s, char c)
+int	set_string(char **arr, const char *s, char c, int i)
 {
-	int	i;
 	int	j;
 	int	start;
 	int	len;
 
-	i = 0;
 	j = 0;
 	while (s[i])
 	{
@@ -82,12 +80,16 @@ char	**ft_split(char const *s, char c)
 {
 	char	**result;
 	int		wordcount;
+	int		i;
+	int		j;
 
 	wordcount = cal_words(s, c);
+	i = 0;
+	j = 0;
 	result = (char **)malloc ((wordcount + 1) * sizeof (char *));
 	if (!result || !s)
 		return (NULL);
-	if (!set_string(result, s, c))
+	if (!set_string(result, s, c, i))
 		return (NULL);
 	return (result);
 }
