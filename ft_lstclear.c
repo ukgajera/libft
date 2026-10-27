@@ -6,7 +6,7 @@
 /*   By: umgajera <umgajera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 10:37:58 by umgajera          #+#    #+#             */
-/*   Updated: 2026/10/27 19:43:03 by umgajera         ###   ########.fr       */
+/*   Updated: 2026/10/27 19:49:25 by umgajera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	t_list	*current_node;
 	t_list	*next_node;
 
-	current_node = *lst; 
 	if (!lst || !del)
 		return ;
+	current_node = *lst;
 	while (current_node != NULL)
 	{
 		next_node = current_node->next;
