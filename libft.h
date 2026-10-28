@@ -6,18 +6,14 @@
 /*   By: umgajera <umgajera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 13:35:05 by umgajera          #+#    #+#             */
-/*   Updated: 2026/10/27 22:55:44 by umgajera         ###   ########.fr       */
+/*   Updated: 2026/10/28 09:59:27 by umgajera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
 # include <unistd.h>
-# include <string.h>
-# include <stddef.h>
-# include <bsd/string.h>
 # include <stdlib.h>
 
 typedef struct s_list
