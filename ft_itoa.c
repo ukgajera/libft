@@ -6,7 +6,7 @@
 /*   By: umgajera <umgajera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 13:22:44 by umgajera          #+#    #+#             */
-/*   Updated: 2026/10/23 18:10:33 by umgajera         ###   ########.fr       */
+/*   Updated: 2026/10/28 08:42:57 by umgajera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,28 +33,28 @@ int	cal_len(long n)
 char	*ft_itoa(int n)
 {
 	char	*result;
-	long	i;
+	long	nb;
 	int		len;
 
-	i = n;
-	len = cal_len(i);
+	nb = n;
+	len = cal_len(nb);
 	result = (char *)malloc ((len * sizeof(char)) + 1);
-	if (!result)
-		return (0);
-	if (i == 0)
+	if (result == NULL)
+		return (NULL);
+	if (nb == 0)
 		result[0] = '0';
-	while (i != 0)
+	result[len] = '\0';
+	if (nb < 0)
 	{
-		if (i < 0)
-		{
-			result[0] = '-';
-			i = -i;
-		}
-		while (i > 0)
-		{
-			result[--len] = '0' + (i % 10);
-			i = i / 10;
-		}
+		result[0] = '-';
+		nb *= -1;
+	}
+	if (nb == 0)
+		result[--len] = '0';
+	while (nb > 0)
+	{
+		result[--len] = '0' + (nb % 10);
+		nb = nb / 10;
 	}
 	return (result);
 }

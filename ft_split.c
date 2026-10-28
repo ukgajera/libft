@@ -6,7 +6,7 @@
 /*   By: umgajera <umgajera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 15:11:40 by umgajera          #+#    #+#             */
-/*   Updated: 2026/10/25 22:54:25 by umgajera         ###   ########.fr       */
+/*   Updated: 2026/10/28 08:11:20 by umgajera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ int	set_string(char **arr, const char *s, char c, int i)
 {
 	int	j;
 	int	start;
-	int	len;
 
 	j = 0;
 	while (s[i])
@@ -62,8 +61,7 @@ int	set_string(char **arr, const char *s, char c, int i)
 			start = i;
 			while (s[i] && s[i] != c)
 				i++;
-			len = i - start;
-			arr[j] = ft_substr(s, start, len);
+			arr[j] = ft_substr(s, start, i - start);
 			if (!arr[j])
 			{
 				free_mem (arr, j);
@@ -92,17 +90,4 @@ char	**ft_split(char const *s, char c)
 	if (!set_string(result, s, c, i))
 		return (NULL);
 	return (result);
-}
-
-int	main(void)
-{
-	char	**tab = ft_split("hello+ brother + hi+++  how+++are+you", '+');
-
-	if (!tab)
-		return (0);
-	while (*tab)
-	{
-		printf ("%s\n", *tab);
-		tab++;
-	}
 }

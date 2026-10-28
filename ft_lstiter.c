@@ -6,7 +6,7 @@
 /*   By: umgajera <umgajera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 19:51:20 by umgajera          #+#    #+#             */
-/*   Updated: 2026/10/27 20:08:01 by umgajera         ###   ########.fr       */
+/*   Updated: 2026/10/27 22:56:53 by umgajera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-
 	if (!lst || !f)
 		return ;
 	while (lst != NULL)

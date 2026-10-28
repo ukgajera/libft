@@ -6,7 +6,7 @@
 /*   By: umgajera <umgajera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 15:45:49 by umgajera          #+#    #+#             */
-/*   Updated: 2026/10/22 17:35:51 by umgajera         ###   ########.fr       */
+/*   Updated: 2026/10/28 08:43:56 by umgajera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,21 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t		size;
-	size_t		i;
+	size_t		actual_size;
 	char		*sub;
 
-	size = ft_strlen(s);
 	if (!s)
 		return (NULL);
-	if (start > size)
-		return ("");
-	sub = malloc(len + 1);
-	if (!sub)
+	size = ft_strlen(s);
+	if (start >= size)
+		return (ft_strdup(""));
+	if (len > size - start)
+		actual_size = size - start + 1;
+	else
+		actual_size = len + 1;
+	sub = malloc(actual_size);
+	if (sub == NULL)
 		return (NULL);
-	i = -1;
-	while (++i < len)
-	{
-		sub[i] = s[start];
-		start++;
-	}
-	sub[i] = '\0';
+	ft_strlcpy(sub, s + start, actual_size);
 	return (sub);
 }
